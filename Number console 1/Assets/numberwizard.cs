@@ -13,32 +13,35 @@ public class numberwizard : MonoBehaviour
     void Start()
     {
         
-        Debug.Log("Welcome to Number Wizard !");
+        Debug.Log("Hey, Let's Play Number Wizard! ");
         Debug.Log("Pick a number , and don't tell to me !");
         Debug.Log("Highest Number you can take is:" + max);
         Debug.Log("Lowest number you can take is:" + min);
-        Debug.Log("Tell me that your number is greater or smaller than my 500! ");
+        Debug.Log("Tell me that your number is greater or smaller than:" + guess);
          Debug.Log("Push Up = Higher , Push Down = Lower, Push Enter = Correct");
+         max = max + 1 ;
         
     }
+
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("Up Arrow key was pressed.");
-            min = guess;
-            Debug.Log(guess);
+           min = guess;
+           guess = ( max + min ) / 2;
+           Debug.Log("Is it Higher or Lower than....." + guess);
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow)){
-            Debug.Log("Down Arrow key was pressed.");
+           
             max = guess;
-            Debug.Log(guess);
+            guess = (max + min) / 2;
+            Debug.Log("Is it Higher or Lower than..... "+ guess);
     
         }
         else if (Input.GetKeyDown(KeyCode.Return)){
-            Debug.Log("You hit Enter.");
+            Debug.Log("I know i am a Genius.");
         }
     }
 }
