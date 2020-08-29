@@ -1,2 +1,2 @@
 # Number-Wizard-Console
-This is the game developed by me during my tutorials
+This is a Number Wizard Game bassed on Binary sorting.
